@@ -1,33 +1,21 @@
 import logo from "./logo.svg";
-import logo2 from "./logo2.svg";
 import "./App.css";
-import { useState } from "react";
-import Button from "./components/Button";
-import Input from "./components/Input";
-import StatefulComponent from "./components/StatefulComponent";
-import StatelessComponent from "./components/StatelessComponent";
-import ClassStatelessComponent from "./components/ClassStatelessComponent";
-import ClassStatefulComponent from "./components/ClassStatefulComponent";
+
+import UncontrolledForm from "./components/UncontrolledForm";
+import ControlledForm from "./components/ControlledForm";
+import UserData from "./components/UserData";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <StatelessComponent
-          texth4={"1. Stateless Component"}
-          texth1={"Learn React"}
-          name={"Logotyp React"}
-          logo={logo}
-        />
-        <StatefulComponent />
-        <br />
-        <ClassStatelessComponent
-          texth4={"3. Class Stateless Component"}
-          texth1={"Learn React"}
-          name={"Logotyp React"}
-          logo={logo2}
-        />
-        <ClassStatefulComponent />
+        <img className="App-logo" src={logo} alt="logotyp REACT" />
+        <h1> Learn React</h1>
+        <div className="div-form" >
+          <UncontrolledForm />
+          <ControlledForm/>
+          <UserData/>
+        </div>
       </header>
     </div>
   );
